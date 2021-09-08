@@ -25,7 +25,7 @@ public class TransacaoController {
     @Autowired
     CartaoRepository cartaoRepository;
 
-    @GetMapping("/{id}/")
+    @GetMapping("/{id}")
     ResponseEntity<?> buscaUltimasTransacoes (@PathVariable String id){
         Optional<Cartao> cartao = cartaoRepository.findCartaoById(id);
         if(!cartao.isPresent()){
